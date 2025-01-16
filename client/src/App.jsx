@@ -18,7 +18,7 @@ const App = () => {
   const { showLogin } = useContext(AppContext)
 
   return (
-    <div className='px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-br from-[#7d8bae] via-[#e5857b] to-[#e8ccc7]' >
+    <div className='px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-br from-purple-50 to-fuchsia-50' >
       <ToastContainer position='bottom-right' />
       <Navbar />
       {showLogin && <Login />}

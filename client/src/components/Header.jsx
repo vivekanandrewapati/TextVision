@@ -42,7 +42,7 @@ const Header = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 2 }}
             >
-                Turn text to <span className='text-blue-600'>image</span>, in seconds.
+                Turn text to <span className='text-purple-400'>image</span>, in seconds.
             </motion.h1>
 
             <motion.p
@@ -51,16 +51,19 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
             >
-                Unleash your creativity with AI. Turn your imagination into visual art in seconds - just type, and watch the magic happen.
+                Generate images from text in seconds.
             </motion.p>
 
             <motion.button
-                className='sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ default: { duration: 0.5 }, opacity: { delay: 0.8, duration: 1 } }}
+                className='sm:text-lg text-white bg-black/90 w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full hover:bg-black transition-colors'
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ y: 1 }}
+                transition={{
+                    default: { duration: 0.3, ease: "easeOut" },
+                    opacity: { duration: 0.5, delay: 0.2 }
+                }}
                 onClick={onClickHandler}
             >
                 Generate Images <img className='h-6' src={assets.star_group} alt="" />
